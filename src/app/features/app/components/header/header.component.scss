@@ -1,0 +1,24 @@
+@import 'common';
+
+:host {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+}
+
+header {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: $text-medium;
+}
+
+img {
+  width: 80px;
+  margin-right: 8px;
+}

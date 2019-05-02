@@ -1,0 +1,76 @@
+@import 'common';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+}
+
+.cwc-inner {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+  &--back {
+    transform: rotateY(180deg);
+  }
+}
+
+.cwc-front,
+.cwc-back {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backface-visibility: hidden;
+  background-size: cover;
+}
+
+.cwc-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.cwc-back {
+  transform: rotateY(180deg);
+}
+
+.cwc-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.cwc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    padding: 4px 8px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+
+    &--medium {
+      font-weight: 500;
+    }
+
+    &--yellow {
+      color: $clr-yellow;
+    }
+
+    &--blue {
+      color: $clr-blue;
+    }
+
+    &--date {
+      margin-bottom: 4px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import 'common';
+
+:host {
+  display: block;
+}
+
+.ws-content {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8px 24px;
+
+  @include breakpoint($breakpoint-xs) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
