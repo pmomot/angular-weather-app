@@ -1,8 +1,0 @@
-// Defines all non-emitting CSS, i.e. variables, mixins, functions
-// Enables dependencies to be added to components with a single import
-
-// Third-party
-@import '~breakpoint-sass/stylesheets/breakpoint';
-
-// Variables
-@import 'variables';
