@@ -8,7 +8,7 @@ export type CityWeatherForecastData = CityWeatherForecastResponse;
 export class CityWeatherForecastModel {
   private readonly forecastItemsCount = 3;
   readonly id: number;
-  readonly forecast: {temperature: number, windSpeed: number, ts: string}[];
+  readonly forecast: {temperature: number, windSpeed: number, ts: Date}[];
 
   constructor (data: CityWeatherForecastResponse) {
     this.id = data.city.id;
@@ -26,7 +26,7 @@ export class CityWeatherForecastModel {
     return list.map(item => ({
       temperature: +item.main.temp.toFixed(1),
       windSpeed: item.wind.speed,
-      ts: item.dt_txt
+      ts: new Date(item.dt_txt.replace(/-/g, '/'))
     }));
   }
 }
