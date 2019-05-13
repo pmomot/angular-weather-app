@@ -185,13 +185,9 @@ and else the `GetGroupWeatherFailed` will be called.
 weather$ = this.actions$.pipe(
   ofType(CityActions.GetGroupWeather),
   switchMap(({payload}) =>
-    timer(2000).pipe(
-      switchMap(() =>
-        this.weatherDataService.getWeatherForGroup(payload).pipe(
-          map(data => new GetGroupWeatherDone(data)),
-          catchError(error => of(new GetGroupWeatherFailed(error)))
-        )
-      )
+    this.weatherDataService.getWeatherForGroup(payload).pipe(
+      map(data => new GetGroupWeatherDone(data)),
+      catchError(error => of(new GetGroupWeatherFailed(error)))
     )
   )
 );
