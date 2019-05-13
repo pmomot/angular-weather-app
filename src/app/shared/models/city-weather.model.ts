@@ -14,6 +14,6 @@ export class CityWeatherModel {
     this.name = data.name;
     this.avgTemperature = +((data.main.temp_min + data.main.temp_max) / 2).toFixed(1);
     this.windSpeed = data.wind.speed;
-    this.imageSrc = `/assets/images/cities/${data.id}.jpg`;
+    this.imageSrc = `./assets/images/cities/${data.id}.jpg`;
   }
 }

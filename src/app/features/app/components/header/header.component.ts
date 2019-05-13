@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <header>
       <img
-        src="/assets/images/logo.svg"
+        src="./assets/images/logo.svg"
         alt="App logo"
         routerLink="/"
       >

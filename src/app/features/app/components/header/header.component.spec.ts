@@ -25,7 +25,7 @@ describe('HeaderComponent', () => {
 
   it('should have logo', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
-    expect(fixture.debugElement.query(queries.logo).nativeElement.src.split('/assets')[1]).toBe('/images/logo.svg');
+    expect(fixture.debugElement.query(queries.logo).nativeElement.src.split('assets')[1]).toBe('/images/logo.svg');
   });
 
   it('should have correct title', () => {
